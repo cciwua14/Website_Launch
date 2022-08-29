@@ -16,8 +16,72 @@ body {
   font-weight: 400;
   line-height: 1;
   background-color: aqua;
+  display: flex;
 }
+
+
+.left-column{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  flex: 0.4;
+}
+
+.right-column{
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  flex: 0.6;
+}
+
+.logo-wrapper{
+  width: 95px;
+  height: 95x;
+}
+
+.logo-wrapper > .logo-img{
+  width: 100%;
+  height: 100%;
+}
+
+.text-wrapper{
+  text-align: center;
+  padding: 50px;
+}
+
+.title-header{
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-wrapper{
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 80%;
+  margin: auto;
+}
+
+.form-group > label{
+  display: none;
+}
+
 
 #div_id_phone_no > div{
   display: flex;
+}
+
+.phoneprefixselect{
+  width: 140px;
+  margin-right: 10px;
+}
+
+.bg-img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }

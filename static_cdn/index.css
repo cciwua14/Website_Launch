@@ -10,121 +10,71 @@
 
 body {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: 'Roboto' sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-}
-
-.container {
+  background-color: aqua;
   display: flex;
 }
 
-.logo-wrapper {
-  width: 25%;
-  height: 20%;
-  position: relative;
-  bottom: 10px;
-  margin-bottom: 20px;
+
+.left-column{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  flex: 0.4;
 }
 
-.logo-img {
+.right-column{
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  flex: 0.6;
+}
+
+.logo-wrapper{
+  width: 95px;
+  height: 95x;
+}
+
+.logo-wrapper > .logo-img{
   width: 100%;
   height: 100%;
 }
 
-.left-column {
-  background-color: #FCF6F5FF;
-  flex: 0.4;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px;
-}
-
 .text-wrapper{
-    text-align: center;
+  text-align: center;
+  padding: 50px;
 }
 
-.title-header {
-  font-family: inherit;
-  font-size: 28px;
-  font-weight: 700;
-  padding-top: 15px;
-  padding-bottom: 40px;
-  text-transform: uppercase;
-  color: #990011FF;
-}
-
-.alert-header {
+.title-header{
   font-family: inherit;
   font-size: 20px;
-  font-weight: 600;
-  padding-top: 30px;
-  padding-left: 40px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-.desc-text {
-  font-family: inherit;
-  padding-left: 40px;
-  padding-bottom: 20px;
+.form-wrapper{
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 80%;
+  margin: auto;
 }
 
-/* .form-wrapper {
-  width: 75%;
-  height: auto;
-  padding-left: 40px;
-} */
-
-/* .form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form > label {
+.form-group > label{
   display: none;
 }
 
-.form > input {
-  padding: 10px;
-  margin: 10px 0 20px 0;
-  border: 1px solid;
-  border-radius: 5px;
-  outline: none;
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px;
-} */
 
-/* .submit-btn {
-  padding: 10px;
-  border: 1px solid #ff0000;
-  outline: none;
-  background-color: #fff;
-  color: #ff0000;
-  font-family: inherit;
-  font-weight: 500;
-  text-transform: uppercase;
-} */
-
-.submit-btn:hover {
-  cursor: pointer;
+#div_id_phone_no > div{
+  display: flex;
 }
 
-.right-column {
-  background-color: bisque;
-  flex: 0.6;
-  width: 100%;
-  height: 100vh;
-}
-
-.bg-img{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+.phoneprefixselect{
+  width: 140px;
+  margin-right: 10px;
 }
