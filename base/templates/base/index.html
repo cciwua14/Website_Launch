@@ -1,0 +1,71 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon</title>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b6c32b21c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="left-column">
+        <div class="logo-wrapper">
+          <img
+            class="logo-img"
+            src="{% static 'logo.png'%}"
+            alt="Charz Grill Logo"
+          />
+        </div>
+        <div class="text-wrapper">
+          <h2 class="alert-header">Hey You!</h2>
+          <h1 class="title-header">The Breakfast Club Is Coming</h1>
+          <p class="desc-text">
+            Sign up to be the first to know when we launch.
+          </p>
+        </div>
+
+        <div class="form-wrapper">
+          <form class="form" method="POST">
+            {% csrf_token %} {{form|crispy}}
+            <button class="submit-btn">Pre-Join Now</button>
+          </form>
+        </div>
+      </div>
+      <div class="right-column">
+        <img
+          class="bg-img"
+          src="{% static 'toasted-bread.jpg'%}"
+          alt="background-image"
+        />
+      </div>
+    </section>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    %%
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+</html>
