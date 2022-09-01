@@ -5,8 +5,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Member(models.Model):
-    first_name = models.CharField(max_length=200, blank=True, null=True)
-    last_name = models.CharField(max_length=200, blank=True, null=True)
+    name = models.CharField(max_length=200, null=False, blank=False)
     phone_no = PhoneNumberField(blank=False, null=False)
     email = models.EmailField(max_length=200, blank=False, null=False)
     join_date = models.DateField(auto_now_add=True)
