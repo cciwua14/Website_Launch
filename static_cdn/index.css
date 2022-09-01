@@ -12,7 +12,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Roboto" sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #fff;
 }
@@ -23,13 +23,16 @@ body {
   }
 }
 
+/* Landing Page */
+
 .left-column {
   background-image: url("/static/toasted-bread.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 50vh;
-  padding: 25px;
+  text-align: center;
+  padding: 30px;
 }
 
 @media screen and  (min-width: 800px){
@@ -38,10 +41,25 @@ body {
     flex: 0.6;
   }
 }
+.right-column {
+  background: #2f0103;
+  text-align: center;
+  height: 100vh;
+  padding: 25px;
+}
+
+@media screen and (min-width :800px){
+  .right-column{
+    flex: 0.4;
+  }
+}
 
 .logo-wrapper {
-  width: 95px;
-  height: 85px;
+  width: 145px;
+  height: 115px;
+  margin: auto;
+  margin-bottom: 30px;
+
 }
 
 .logo-img {
@@ -49,77 +67,183 @@ body {
   height: 100%;
 }
 
-.right-column {
-  text-align: center;
-  padding-top: 50px;
-  background: #ad0b0b;
-  height: 100vh;
+.text-wrapper{
+  margin-top: 50px;
 }
-
-@media screen and (min-width :800px){
-  .right-column{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 0.4;
-  }
-}
-
-.text-wrapper {
-  padding: 0 15px 0 15px;
-}
-
 
 .title-header {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
+  text-transform: uppercase;
   padding-bottom: 13px;
 }
 
-.form-wrapper {
+.desc-text{
+  padding: 0 20px 0 20px;
+  white-space: wrap;
+}
+
+.modal-btn{
   background-color: #ffcc00;
-  color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  padding: 25px;
-}
-
-@media screen and (min-width: 800px){
-  .form-wrapper{
-    width: 80%;
-  }
-}
-
-.submit-btn {
-  padding: 15px;
-  background-color: #ff0000;
+  width: 50%;
+  color: #000;
   border: none;
   border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
   text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px;
+  margin-top: 10px;
 }
 
-.submit-btn:hover {
+.modal-btn:hover{
   cursor: pointer;
 }
 
-.submit-btn:focus{
+.modal-btn:focus{
   outline: none;
 }
 
-.form-group > label {
+.member-card{
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.icon-wrapper{
+  width: 40px;
+  height: 40px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 13px;
+}
+
+.icon-wrapper > i{
+  font-size: 20px;
+  margin-top: 10px;
+  color: #2f0103;
+
+}
+
+.card-text{
+  margin-top: 8px;
+}
+
+.card-text > h2{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  background-color: #ffcc00;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.19);
+  padding: 30px 10px;
+  border-radius: 5px;
+  position: relative;
+  text-align: left !important;
+  color: #000;
+}
+
+.field-group {
+  padding: 10px;
+}
+
+.field-group legend {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.field-group li {
+  font-size: 10px;
+}
+
+.field-group span {
+  font-size: 15px;
+}
+
+.form-group > label{
   display: none;
 }
 
-#div_id_phone_no > div {
-  display: flex;
+.form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border: 1px solid rgb(194, 189, 189);
+  border-radius: 5px;
+}
+
+.form input:focus {
+  outline: none;
+  border: 1px solid #2f0103;
 }
 
 .phoneprefixselect {
-  width: 100px;
-  margin-right: 10px;
+  width: 150px;
+} 
+
+.btn-submit {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f0103;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+  overflow-y: scroll;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.alert-success{
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+}
+
+.alert-warning{
+  width: 250px;
+  margin: auto;
+  padding: 10px;
 }
